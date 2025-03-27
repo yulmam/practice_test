@@ -28,7 +28,7 @@ public class ShortenUrlRestController {
     public ResponseEntity<ShortenUrlCreateResponseDto> createShortenUrl(
             @Valid @RequestBody ShortenUrlCreateRequestDto shortenUrlCreateRequestDto
     ) {
-        log.info("createShortenUrl", shortenUrlCreateRequestDto.getOriginalUrl());
+        log.trace("createShortenUrl", shortenUrlCreateRequestDto.getOriginalUrl());
         ShortenUrlCreateResponseDto shortenUrlCreateResponseDto =
                 simpleShortenUrlService.generateShortenUrl(shortenUrlCreateRequestDto);
         return ResponseEntity.ok(shortenUrlCreateResponseDto);

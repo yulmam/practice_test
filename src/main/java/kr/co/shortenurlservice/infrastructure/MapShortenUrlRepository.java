@@ -13,6 +13,7 @@ import java.util.concurrent.ConcurrentHashMap;
 public class MapShortenUrlRepository implements ShortenUrlRepository {
 
     private Map<String, ShortenUrl> shortenUrls = new ConcurrentHashMap<>();
+    //db로 나가는 쿼리 정도도 debug레벨의 로그로 남겨도 된다.
 
     @Override
     public void saveShortenUrl(ShortenUrl shortenUrl) {
